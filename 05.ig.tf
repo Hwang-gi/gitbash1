@@ -6,10 +6,11 @@ resource "aws_internet_gateway" "PRD-IGW" {
 
 }
 
-resource "aws_internet_gateway" "DEV-IGW" {
+/*resource "aws_internet_gateway" "DEV-IGW" {
   vpc_id = aws_vpc.DEV-VPC.id
   tags = {
     "Name" = "DEV-IGW"
   }
 
 }
+*/
