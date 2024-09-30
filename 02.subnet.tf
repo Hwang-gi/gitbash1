@@ -7,7 +7,7 @@ resource "aws_subnet" "PRD-PUB-BASTION-2A" {
   tags = {
     "Name"                              = "PRD-PUB-BASTION-2A"
     "kubernetes.io/role/elb"            = "1"
-    "kubernetes.io/cluster/prd-cluster" = "shared"
+    "kubernetes.io/cluster/PRD-cluster" = "shared"
 
   }
 }
@@ -20,7 +20,7 @@ resource "aws_subnet" "PRD-PUB-BASTION-2C" {
   tags = {
     "Name"                              = "PRD-PUB-BASTION-2C"
     "kubernetes.io/role/elb"            = "1"
-    "kubernetes.io/cluster/prd-cluster" = "shared"
+    "kubernetes.io/cluster/PRD-cluster" = "shared"
 
   }
 }
@@ -33,7 +33,7 @@ resource "aws_subnet" "PRD-PRI-EKS-MANAGED-SERVER-2A" {
   tags = {
     "Name"                              = "PRD-PRI-EKS-MANAGED-SERVER-2A"
     "kubernetes.io/role/internal-elb"   = "1"
-    "kubernetes.io/cluster/prd-cluster" = "shared"
+    "kubernetes.io/cluster/PRD-cluster" = "shared"
 
   }
 }
@@ -45,7 +45,7 @@ resource "aws_subnet" "PRD-PRI-EFS-MANAGED-SERVER-2A" {
   tags = {
     "Name"                              = "PRD-PRI-EFS-MANAGED-SERVER-2A"
     "kubernetes.io/role/internal-elb"   = "1"
-    "kubernetes.io/cluster/prd-cluster" = "shared"
+    "kubernetes.io/cluster/PRD-cluster" = "shared"
 
   }
 }
@@ -57,7 +57,7 @@ resource "aws_subnet" "PRD-PRI-01-2A" {
   tags = {
     "Name"                              = "PRD-PRI-01-2A"
     "kubernetes.io/role/internal-elb"   = "1"
-    "kubernetes.io/cluster/prd-cluster" = "shared"
+    "kubernetes.io/cluster/PRD-cluster" = "shared"
 
   }
 }
@@ -69,7 +69,7 @@ resource "aws_subnet" "PRD-PRI-01-2C" {
   tags = {
     "Name"                              = "PRD-PRI-01-2C"
     "kubernetes.io/role/internal-elb"   = "1"
-    "kubernetes.io/cluster/prd-cluster" = "shared"
+    "kubernetes.io/cluster/PRD-cluster" = "shared"
 
   }
 }
@@ -81,7 +81,7 @@ resource "aws_subnet" "PRD-PRI-02-2A" {
   tags = {
     "Name"                              = "PRD-PRI-02-2A"
     "kubernetes.io/role/internal-elb"   = "1"
-    "kubernetes.io/cluster/prd-cluster" = "shared"
+    "kubernetes.io/cluster/PRD-cluster" = "shared"
 
   }
 }
@@ -93,7 +93,7 @@ resource "aws_subnet" "PRD-PRI-02-2C" {
   tags = {
     "Name"                              = "PRD-PRI-02-2C"
     "kubernetes.io/role/internal-elb"   = "1"
-    "kubernetes.io/cluster/prd-cluster" = "shared"
+    "kubernetes.io/cluster/PRD-cluster" = "shared"
 
   }
 }
@@ -105,7 +105,7 @@ resource "aws_subnet" "PRD-PRI-EKS-MANAGED-SERVER-2C" {
   tags = {
     "Name"                              = "PRD-PRI-EKS-MANAGED-SERVER-2C"
     "kubernetes.io/role/internal-elb"   = "1"
-    "kubernetes.io/cluster/prd-cluster" = "shared"
+    "kubernetes.io/cluster/PRD-cluster" = "shared"
 
   }
 }
@@ -117,7 +117,7 @@ resource "aws_subnet" "PRD-PRI-ARGOCD-MANAGED-SERVER-2C" {
   tags = {
     "Name"                              = "PRD-PRI-ARGOCD-MANAGED-SERVER-2C"
     "kubernetes.io/role/internal-elb"   = "1"
-    "kubernetes.io/cluster/prd-cluster" = "shared"
+    "kubernetes.io/cluster/PRD-cluster" = "shared"
 
   }
 }
