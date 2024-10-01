@@ -16,6 +16,27 @@ resource "aws_iam_role" "Node-Group-Role" {
   })
 }
 
+resource "aws_iam_policy" "eks_autoscaler_policy" {
+  name        = "EKSClusterAutoscalerPolicy"
+  description = "Policy for EKS Cluster Autoscaler"
+  policy      = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = [
+          "autoscaling:DescribeAutoScalingGroups",
+          "autoscaling:DescribeAutoScalingInstances",
+          "autoscaling:UpdateAutoScalingGroup",
+          "autoscaling:SetDesiredCapacity",
+          "autoscaling:TerminateInstanceInAutoScalingGroup"
+        ]
+        Resource = "*"
+      }
+    ]
+  })
+}
+
 resource "aws_iam_role_policy_attachment" "AmazonEKS_CNI_Policy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
   role       = aws_iam_role.Node-Group-Role.name
@@ -28,6 +49,11 @@ resource "aws_iam_role_policy_attachment" "AmazonEC2ContainerRegistryReadOnly" {
 
 resource "aws_iam_role_policy_attachment" "AmazonEKSWorkerNodePolicy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
+  role       = aws_iam_role.Node-Group-Role.name
+}
+
+resource "aws_iam_role_policy_attachment" "attach_autoscaler_policy" {
+  policy_arn = aws_iam_policy.eks_autoscaler_policy.arn
   role       = aws_iam_role.Node-Group-Role.name
 }
 
