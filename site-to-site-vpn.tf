@@ -1,5 +1,5 @@
 
-# 가상 프라이빗 게이트웨이 생성
+/*# 가상 프라이빗 게이트웨이 생성
 resource "aws_vpn_gateway" "prd_vpn_gateway" {
   vpc_id = aws_vpc.PRD-VPC.id
 
@@ -46,4 +46,4 @@ resource "aws_vpn_connection_route" "seoulus_vpn_route" {
   vpn_connection_id      = aws_vpn_connection.seoulus_vpn_connection.id
   destination_cidr_block = "10.240.0.0/16" # 버지니아 VPC의 CIDR
 }
-
+*/
