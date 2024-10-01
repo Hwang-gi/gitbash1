@@ -82,7 +82,7 @@ resource "aws_instance" "PRD-PRI-EC2-EFS-MANAGED-SERVER-2A" {
 }
 
 
-/*resource "aws_instance" "PRD-PRI-EC2-ARGOCD-MANAGED-SERVER-2C" {
+resource "aws_instance" "PRD-PRI-EC2-ARGOCD-MANAGED-SERVER-2C" {
   ami                    = "ami-056a29f2eddc40520"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.PRD-SG-ALB.id]
@@ -101,4 +101,4 @@ resource "aws_instance" "PRD-PRI-EC2-EFS-MANAGED-SERVER-2A" {
     "Name" = "PRD-PRI-EC2-ARGOCD-MANAGED-SERVER-2C"
   }
 }
-*/
+
